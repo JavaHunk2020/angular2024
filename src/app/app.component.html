@@ -8,21 +8,23 @@
  
  <h2 style="background-color: fuchsia;">Signup Page!!!</h2>
  <hr/>
- 	 <b style="color:red"></b>
+ 	 <b style="color:red">
+    {{signup.firstName}}
+  </b>
    <form>
      <div style="width: 50%">
 	   <h5>FirstName :</h5>
-	   <input type="text" class="form-control" #firstName name="firstName"/> 
+	   <input [(ngModel)]="signup.firstName"  type="text" class="form-control" #firstName name="firstName"/> 
 	      <h5>LastName :</h5>
-	   <input #lastName   type="text" class="form-control" name="lastName"/> 
+	   <input [(ngModel)]="signup.lastName"   type="text" class="form-control" name="lastName"/> 
 	    <h5>Password :</h5>
-	   <input  #password  type="password" class="form-control"  name="password"/> 
+	   <input [(ngModel)]="signup.password"     type="password" class="form-control"  name="password"/> 
 	    <h5>Email :</h5>
 	   
-	   <input  #email   type="email" class="form-control"  name="email"/> 
+	   <input [(ngModel)]="signup.email"      type="email" class="form-control"  name="email"/> 
 	    <hr/>
 	   
-	   <button (click)="sendData(firstName,lastName,password,email)" type="button" class="btn btn-primary">Signup!</button>
+	   <button (click)="sendData()" type="button" class="btn btn-primary">Signup!</button>
 	   </div>
    </form>
    <hr/>
@@ -38,7 +40,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let signup of singups;index as sno">
+      <tr *ngFor="let signup of signups;index as sno">
         <td>{{sno+1}}</td>
         <td>{{signup.firstName}}</td>
         <td>{{signup.lastName}}</td>
