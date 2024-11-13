@@ -28,7 +28,7 @@
 	   </div>
    </form>
    <hr/>
-   <h3>Signups Data</h3>            
+   <h3 style="background-color:yellow">Signups Data</h3>            
   <table class="table table-bordered">
     <thead>
       <tr>
@@ -37,6 +37,7 @@
         <th>Lastname</th>
         <th>Email</th>
         <th>Password</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
@@ -46,6 +47,10 @@
         <td>{{signup.lastName}}</td>
         <td>{{signup.email}}</td>
         <td>{{signup.password}}</td>
+        <td>
+
+          <button (click)="deleteData(signup)" type="button" class="btn btn-danger">D!!</button>
+        </td>
       </tr>
     
     </tbody>
