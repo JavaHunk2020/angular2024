@@ -1,0 +1,33 @@
+<div class="container">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEN001Q5AoJ2REqLeVFIjweNX-DXvXVA1FDA&s"/>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEN001Q5AoJ2REqLeVFIjweNX-DXvXVA1FDA&s"/>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEN001Q5AoJ2REqLeVFIjweNX-DXvXVA1FDA&s"/>
+     
+     <h2 style="background-color: fuchsia;">Signup Page!!!</h2>
+     <hr/>
+          <b style="color:red">
+        {{signup.firstName}}
+      </b>
+       <form>
+         <div style="width: 50%">
+           <h5>FirstName :</h5>
+           <input [(ngModel)]="signup.firstName"  type="text" class="form-control" #firstName name="firstName"/> 
+              <h5>LastName :</h5>
+           <input [(ngModel)]="signup.lastName"   type="text" class="form-control" name="lastName"/> 
+            <h5>Password :</h5>
+           <input [(ngModel)]="signup.password"     type="password" class="form-control"  name="password"/> 
+            <h5>Email :</h5>
+           
+           <input [(ngModel)]="signup.email"      type="email" class="form-control"  name="email"/> 
+            <hr/>
+           
+           <button (click)="sendData()" type="button" class="btn btn-primary" style="margin-right: 10px;">Signup!</button>
+    
+         <button [routerLink]="['/login']" type="button" class="btn btn-warning">Auth</button>
+           </div>
+       </form>
+       <hr/>
+      
+       <hr/>
+    </div>
+    

@@ -1,0 +1,32 @@
+<div class="container">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEN001Q5AoJ2REqLeVFIjweNX-DXvXVA1FDA&s"/>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEN001Q5AoJ2REqLeVFIjweNX-DXvXVA1FDA&s"/>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEN001Q5AoJ2REqLeVFIjweNX-DXvXVA1FDA&s"/>
+<h3 style="background-color:yellow">Signups Data</h3>            
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>SNO</th>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let signup of signups;index as sno">
+      <td>{{sno+1}}</td>
+      <td>{{signup.firstName}}</td>
+      <td>{{signup.lastName}}</td>
+      <td>{{signup.email}}</td>
+      <td>{{signup.password}}</td>
+      <td>
+
+        <button (click)="deleteData(signup)" type="button" class="btn btn-danger">D!!</button>
+      </td>
+    </tr>
+  
+  </tbody>
+</table>
+</div>
